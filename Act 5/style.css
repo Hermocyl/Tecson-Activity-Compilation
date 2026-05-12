@@ -1,0 +1,470 @@
+/* RESET */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* BODY */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+
+    background: white;
+}
+
+
+
+/* NAVBAR */
+
+header {
+
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 25px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+
+    transition: 0.4s;
+}
+
+
+
+/* NAVBAR WHEN SCROLLED */
+
+header.sticky {
+
+    background: white;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* NAV LINKS */
+
+header a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin: 0px 15px;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+
+
+/* CHANGE TEXT COLOR */
+
+header.sticky a {
+
+    color: black;
+}
+
+
+
+/* HOVER */
+
+header a:hover {
+
+    color: crimson;
+}
+
+
+
+/* LEFT NAV */
+
+.left-nav {
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* LOGO */
+
+.logo a {
+
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+
+/* HERO SECTION */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+
+/* VIDEO */
+
+.hero-video {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/* VIDEO CONTROLS */
+
+.video-controls {
+
+    position: absolute;
+
+    bottom: 30px;
+    left: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    padding: 12px 18px;
+
+    border-radius: 40px;
+
+    backdrop-filter: blur(5px);
+
+    z-index: 100;
+}
+
+
+
+/* PLAY BUTTON */
+
+#playPauseBtn {
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: black;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+
+/* PLAY BUTTON HOVER */
+
+#playPauseBtn:hover {
+
+    background: crimson;
+
+    color: white;
+
+    transform: scale(1.1);
+}
+
+
+
+/* VOLUME */
+
+#volumeControl {
+
+    width: 120px;
+
+    cursor: pointer;
+}
+
+
+
+/* HERO TEXT */
+
+.hero-text {
+
+    position: absolute;
+
+    bottom: 80px;
+    right: 80px;
+
+    color: white;
+}
+
+
+
+.hero-text h1 {
+
+    font-size: 90px;
+
+    font-weight: bold;
+
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* CONTENT SECTION */
+
+.content-section {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+
+/* IMAGES */
+
+.content-section img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+
+/* IMAGE HOVER */
+
+.content-section:hover img {
+
+    transform: scale(1.05);
+}
+
+
+
+/* OVERLAY */
+
+.overlay {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    color: white;
+}
+
+
+
+/* SMALL TEXT */
+
+.overlay p {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* BIG TEXT */
+
+.overlay h1 {
+
+    font-size: 75px;
+
+    margin-bottom: 30px;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* BUTTON */
+
+.btn {
+
+    background: darkred;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 18px 45px;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+
+
+/* BUTTON HOVER */
+
+.btn:hover {
+
+    background: crimson;
+
+    letter-spacing: 3px;
+
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    header {
+
+        padding: 20px;
+    }
+
+    .logo a {
+
+        font-size: 18px;
+    }
+
+    header a {
+
+        font-size: 14px;
+        margin: 0px 8px;
+    }
+
+    .hero-text h1 {
+
+        font-size: 50px;
+    }
+
+    .overlay h1 {
+
+        font-size: 45px;
+    }
+
+    .overlay p {
+
+        font-size: 24px;
+    }
+
+    .btn {
+
+        padding: 14px 30px;
+        font-size: 18px;
+    }
+
+}
+
+/* PAGINATION */
+
+.pagination-container {
+
+    position: fixed;
+
+    bottom: 40px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: white;
+
+    padding: 20px 35px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    z-index: 9999;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* LINKS */
+
+.pagination-container a {
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+
+/* HOVER */
+
+.pagination-container a:hover {
+
+    background: black;
+
+    color: white;
+}
+
+
+
+/* ACTIVE PAGE */
+
+.active-page {
+
+    background: black;
+
+    color: white !important;
+}
