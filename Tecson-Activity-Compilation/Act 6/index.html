@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Runway Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/faviconfinale.png">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-section">
+
+            <!-- LOGO -->
+
+            <h1 class="logo">
+                RUNWAY
+            </h1>
+
+
+
+            <!-- FORM -->
+
+            <form action="../Act 5/index.html">
+
+                <!-- EMAIL -->
+
+                <label>Email address</label>
+
+                <input type="email"
+                placeholder=""
+                required>
+
+
+
+                <!-- PASSWORD -->
+
+                <label>Password</label>
+
+                <div class="password-container">
+
+                    <input type="password"
+                    id="password"
+                    required>
+
+
+
+                    <!-- EYE ICON -->
+
+                    <span id="togglePassword">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- REMEMBER + FORGOT -->
+
+                <div class="options">
+
+                    <div class="remember">
+
+                        <input type="checkbox" id="remember">
+
+                        <label for="remember">
+                            Remember me
+                        </label>
+
+                    </div>
+
+
+
+                    <a href="#" class="forgot-password">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button type="submit" class="login-btn">
+
+                    Log in
+
+                </button>
+
+
+
+                <!-- DIVIDER -->
+
+                <div class="divider">
+
+                    <div class="line"></div>
+
+                    <p>Or continue with</p>
+
+                    <div class="line"></div>
+
+                </div>
+
+
+
+                <!-- SOCIALS -->
+
+                <div class="socials">
+
+                    <!-- FACEBOOK -->
+
+                    <button type="button" class="social-btn">
+
+                        <i class="fa-brands fa-facebook"></i>
+
+                        <span>Facebook</span>
+
+                    </button>
+
+
+
+                    <!-- GOOGLE -->
+
+                    <button type="button" class="social-btn">
+
+                        <i class="fa-brands fa-google"></i>
+
+                        <span>Google</span>
+
+                    </button>
+
+
+
+                    <!-- APPLE -->
+
+                    <button type="button" class="social-btn">
+
+                        <i class="fa-brands fa-apple"></i>
+
+                        <span>Apple</span>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- SIGN UP -->
+
+                <p class="signup-text">
+
+                    Don’t have an account?
+
+                    <a href="#">
+                        Sign Up
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- RIGHT IMAGE -->
+
+        <div class="right-section">
+
+            <img src="assets/girl.png" alt="Fashion Model">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const togglePassword =
+        document.getElementById("togglePassword");
+
+        const password =
+        document.getElementById("password");
+
+
+
+        togglePassword.addEventListener("click", function(){
+
+
+
+            if(password.type === "password"){
+
+                password.type = "text";
+
+                togglePassword.innerHTML =
+                '<i class="fa-solid fa-eye-slash"></i>';
+
+            }
+
+            else{
+
+                password.type = "password";
+
+                togglePassword.innerHTML =
+                '<i class="fa-solid fa-eye"></i>';
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
